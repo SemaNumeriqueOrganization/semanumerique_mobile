@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:semmanumerique_mobile/core/constants/constants.dart';
+import 'package:semanumerique_mobile/core/core.dart';
 
 ThemeData mkasthemeData = ThemeData(
   fontFamily: "Comfortaa",

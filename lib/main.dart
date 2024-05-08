@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:semanumerique_mobile/core/core.dart';
+import 'package:semanumerique_mobile/import.dart';
+import 'package:semanumerique_mobile/routes.dart';
 
 import 'views/screens/screens.dart';
 
@@ -11,15 +14,30 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
+      title: 'Flutter Demo',
+      theme: mkasthemeData,
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        fontFamily: ('inter'),
-        useMaterial3: true,
-      ),
-      home: const auth_screen(),);
+      getPages: routes,
+    );
   }
+}
+
+void configLoading() {
+  EasyLoading.instance
+    ..displayDuration = const Duration(milliseconds: 2000)
+    ..indicatorType = EasyLoadingIndicatorType.fadingCircle
+    ..loadingStyle = EasyLoadingStyle.dark
+    ..indicatorSize = 45.0
+    ..radius = 10.0
+    ..progressColor = MkasColor.white
+    ..backgroundColor = MkasColor.primaryColor
+    ..indicatorColor = MkasColor.white
+    ..textColor = MkasColor.white
+    ..userInteractions = false
+    ..maskType = EasyLoadingMaskType.black
+    ..dismissOnTap = true;
+
 }

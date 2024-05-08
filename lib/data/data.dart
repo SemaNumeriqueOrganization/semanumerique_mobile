@@ -1,1 +1,1 @@
-
+export 'model/model.dart';

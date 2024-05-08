@@ -3,6 +3,10 @@ import 'package:semanumerique_mobile/core/core.dart';
 import 'package:semanumerique_mobile/import.dart';
 import 'package:semanumerique_mobile/routes.dart';
 
+import 'views/screens/screens.dart';
+
+
+
 void main() {
   runApp(const MyApp());
 }
@@ -35,4 +39,5 @@ void configLoading() {
     ..userInteractions = false
     ..maskType = EasyLoadingMaskType.black
     ..dismissOnTap = true;
+
 }

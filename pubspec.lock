@@ -107,11 +107,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+
   flutter_web_plugins:
     dependency: transitive
     description: flutter
     source: sdk
     version: "0.0.0"
+
   get:
     dependency: "direct main"
     description:
@@ -136,6 +138,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.0.2"
+
   leak_tracker:
     dependency: transitive
     description:
@@ -400,3 +403,4 @@ packages:
 sdks:
   dart: ">=3.3.4 <4.0.0"
   flutter: ">=3.19.0"
+

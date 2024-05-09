@@ -1,10 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:semanumerique_mobile/core/constants/color.dart';
+import 'package:semanumerique_mobile/core/constants/constants.dart';
+import 'package:semanumerique_mobile/import.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text(
+              "Login Screen",
+              style: TextStyle(color: MkasColor.primaryColor),
+            ),
+            TextButton(
+              onPressed: () => Get.toNamed(AppRoute.registerScreen),
+              child: const Text("Register"),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }

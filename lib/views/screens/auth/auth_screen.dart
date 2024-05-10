@@ -42,7 +42,7 @@ class _auth_screenState extends State<auth_screen> {
               'Welcome Back',
               style: TextStyle(fontSize: 30, color: Colors.white),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             GestureDetector(

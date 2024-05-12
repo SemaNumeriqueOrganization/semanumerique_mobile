@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:semanumerique_mobile/core/constants/color.dart';
 import 'package:semanumerique_mobile/core/constants/constants.dart';
 import 'package:semanumerique_mobile/import.dart';
@@ -87,23 +88,26 @@ class LoginScreen extends StatelessWidget {
                     const SizedBox(
                       height: 70,
                     ),
-                    Container(
-                      height: 50,
-                      width: 300,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        gradient: const LinearGradient(colors: [
-                          Color(0xffB81736),
-                          Color(0xff2A1639),
-                        ]),
-                      ),
-                      child: const Center(
-                        child: Text(
-                          'SIGN IN',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 20,
-                              color: Colors.white),
+                    GestureDetector(
+                      onTap: () => Get.toNamed(AppRoute.homeScreen),
+                      child: Container(
+                        height: 50,
+                        width: 300,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(30),
+                          gradient: const LinearGradient(colors: [
+                            Color(0xffB81736),
+                            Color(0xff2A1639),
+                          ]),
+                        ),
+                        child: const Center(
+                          child: Text(
+                            'SIGN IN',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20,
+                                color: Colors.white),
+                          ),
                         ),
                       ),
                     ),

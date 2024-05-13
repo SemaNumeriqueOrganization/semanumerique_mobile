@@ -39,28 +39,39 @@ class _LoadingState extends State<Loading> {
             const SizedBox(
               height: 30,
             ),
-             ButonSigninSignup(text: 'Sign in', textStyle: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white), onTap: () => Get.toNamed(AppRoute.loginScreen),),
+            ButonSigninSignup(
+              text: 'Sign in',
+              textStyle: const TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white),
+              onTap: () => Get.toNamed(AppRoute.loginScreen),
+            ),
             const SizedBox(
               height: 25,
             ),
-            GestureDetector(
-              onTap: () => Get.toNamed(AppRoute.registerScreen),
-              child: Container(
-                height: 50,
-                width: 320,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(30),
-                  border: Border.all(color: Colors.white),
-                ),
-                child: const Center(
-                  child: Text(
-                    'SIGN up ',
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black),
-                  ),
+            ButtonRegister(
+                text: 'Sign Up',
+                onTap: () => Get.toNamed(AppRoute.registerScreen),
+                textStyle: const TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black)),
+            Container(
+              height: 50,
+              width: 320,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(30),
+                border: Border.all(color: Colors.white),
+              ),
+              child: const Center(
+                child: Text(
+                  'SIGN up ',
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black),
                 ),
               ),
             ),
@@ -97,4 +108,3 @@ class _LoadingState extends State<Loading> {
     // ),);
   }
 }
-

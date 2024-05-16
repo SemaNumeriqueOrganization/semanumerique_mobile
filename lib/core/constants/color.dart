@@ -22,5 +22,6 @@ class MkasColor {
   static const Color white = Color(0xFFFFFFFF);
   static const Color whitepre = Color.fromARGB(255, 250, 251, 253);
   static const Color degarColorRed = Color.fromARGB(255, 7, 56, 179);
+  static const Color Bluetext = Color.fromARGB(255, 4, 32, 101);
   static const Color degarColorBlack = Color.fromARGB(255, 61, 136, 255);
 }

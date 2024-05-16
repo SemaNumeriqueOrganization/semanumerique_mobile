@@ -18,14 +18,14 @@ class ButtonRegister extends StatelessWidget {
     return GestureDetector(
       onTap: () => Get.toNamed(AppRoute.registerScreen),
       child: Container(
-        height: 50,
-        width: 320,
+        height: MediaQuery.of(context).size.height / 17,
+        width: MediaQuery.of(context).size.width / 1.35,
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(30),
           border: Border.all(color: Colors.white),
         ),
-        child:  Center(
+        child: Center(
           child: Text(
             text,
             style: textStyle,

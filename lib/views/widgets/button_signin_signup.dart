@@ -11,7 +11,6 @@ class ButonSigninSignup extends StatelessWidget {
   final String text;
   final void Function() onTap;
   final TextStyle textStyle;
-
   @override
   Widget build(BuildContext context) {
     return GestureDetector(

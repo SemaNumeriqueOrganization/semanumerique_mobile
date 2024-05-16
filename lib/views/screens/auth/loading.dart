@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:semanumerique_mobile/core/core.dart';
 import 'package:semanumerique_mobile/import.dart';
 import 'package:semanumerique_mobile/views/views.dart';
@@ -25,9 +26,15 @@ class _LoadingState extends State<Loading> {
         ),
         child: Column(
           children: [
-            const Padding(
+            Padding(
               padding: EdgeInsets.only(top: 200.0),
-              child: Image(image: AssetImage('assets/logo.png')),
+              child: Image(
+                image: const AssetImage(
+                  'assets/logo2.png',
+                ),
+                height: MediaQuery.of(context).size.height / 8,
+                width: MediaQuery.of(context).size.height / 1,
+              ),
             ),
             const SizedBox(
               height: 100,
@@ -57,24 +64,6 @@ class _LoadingState extends State<Loading> {
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                     color: Colors.black)),
-            Container(
-              height: 50,
-              width: 320,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(30),
-                border: Border.all(color: Colors.white),
-              ),
-              child: const Center(
-                child: Text(
-                  'SIGN up ',
-                  style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black),
-                ),
-              ),
-            ),
             const Spacer(),
             const Text(
               'login with Social Media ',
@@ -83,28 +72,36 @@ class _LoadingState extends State<Loading> {
             const SizedBox(
               height: 12,
             ),
-            const Image(image: AssetImage('assets/social.png'))
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Icon(
+                  FontAwesomeIcons.instagram,
+                  size: 30,
+                  color: Colors.white,
+                ),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width / 15,
+                ),
+                const Icon(
+                  FontAwesomeIcons.twitter,
+                  size: 30,
+                  color: Colors.white,
+                ),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width / 15,
+                ),
+                const Icon(
+                  FontAwesomeIcons.facebook,
+                  size: 30,
+                  color: Colors.white,
+                ),
+              ],
+            ),
+            const Spacer(),
           ],
         ),
       ),
     );
-
-    //Center(
-    // child: Column(
-    // mainAxisAlignment: MainAxisAlignment.center,
-    // children: [
-    //   TextButton(
-    //  onPressed: () => Get.toNamed(AppRoute.loginScreen),
-    //  child: const Text( "Login Screen",
-    //  style: TextStyle(color: MkasColor.primaryColor),),
-
-    // ),
-    // TextButton(
-    //  onPressed: () => Get.toNamed(AppRoute.registerScreen),
-    //   child: const Text("Register"),
-    // ),
-    // ],
-    //  ),
-    // ),);
   }
 }

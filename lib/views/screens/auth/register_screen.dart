@@ -47,7 +47,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 300.0),
+            padding: const EdgeInsets.only(top: 250.0),
             child: Container(
               decoration: const BoxDecoration(
                 borderRadius: BorderRadius.only(
@@ -64,33 +64,14 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       const CustomTextField(
-                        label: 'Gmail',
-                        hint: "example : semanumerique@gmail.com",
-                        suffixIcon: Icon(Icons.mail, color: Colors.grey),
+                        label: 'Name',
+                        hint: "Full Name",
+                        suffixIcon: Icon(Icons.person, color: Colors.grey),
                       ),
-                      const TextField(
-                        decoration: InputDecoration(
-                            hintText: 'Name',
-                            suffixIcon: Icon(Icons.check, color: Colors.grey),
-                            label: Text(
-                              'Full Name',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: MkasColor.Bluetext,
-                              ),
-                            )),
-                      ),
-                      const TextField(
-                        decoration: InputDecoration(
-                            hintText: 'Phone or number',
-                            suffixIcon: Icon(Icons.check, color: Colors.grey),
-                            label: Text(
-                              'Phone or Gamil',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: MkasColor.Bluetext,
-                              ),
-                            )),
+                      const CustomTextField(
+                        label: 'Phone or Email',
+                        hint: "+243 975 *** **9 or exam@gmail.com",
+                        suffixIcon: Icon(Icons.phone, color: Colors.grey),
                       ),
                       TextField(
                         decoration: InputDecoration(
@@ -157,7 +138,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         ),
                       ),
                       const SizedBox(
-                        height: 70,
+                        height: 30,
                       ),
                       Container(
                         height: 50,
@@ -171,7 +152,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         ),
                         child: const Center(
                           child: Text(
-                            'SIGN IN',
+                            'SIGN UP',
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 20,
@@ -180,7 +161,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         ),
                       ),
                       const SizedBox(
-                        height: 90,
+                        height: 20,
                       ),
                       const Align(
                         alignment: Alignment.bottomRight,
@@ -189,14 +170,14 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
                             Text(
-                              "Don't have account ?",
+                              "Already have account ?",
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: Colors.grey,
                               ),
                             ),
                             Text(
-                              'Sign Up',
+                              'Sign In',
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 17,
@@ -205,7 +186,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             ),
                           ],
                         ),
-                      )
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
                     ],
                   ),
                 ),

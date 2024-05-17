@@ -29,12 +29,21 @@ class _RegisterScreenState extends State<RegisterScreen> {
             ),
             child: const Padding(
               padding: EdgeInsets.only(top: 85.0, left: 22),
-              child: Text(
-                'Hello\n Sign in ',
-                style: TextStyle(
-                    fontSize: 30,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Create ',
+                    style: TextStyle(
+                        fontSize: 40,
+                        color: Colors.white,
+                        fontWeight: FontWeight.w900),
+                  ),
+                  Text(
+                    "Account and enjoy This opportinity! ",
+                    style: TextStyle(fontSize: 20, color: MkasColor.white),
+                  )
+                ],
               ),
             ),
           ),

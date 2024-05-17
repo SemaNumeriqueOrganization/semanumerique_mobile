@@ -3,8 +3,15 @@ import 'package:flutter/widgets.dart';
 import 'package:semanumerique_mobile/core/core.dart';
 import 'package:semanumerique_mobile/import.dart';
 
-class RegisterScreen extends StatelessWidget {
+class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
+
+  @override
+  State<RegisterScreen> createState() => _RegisterScreenState();
+}
+
+class _RegisterScreenState extends State<RegisterScreen> {
+  bool _obscurePassword = true;
 
   @override
   Widget build(BuildContext context) {
@@ -16,12 +23,12 @@ class RegisterScreen extends StatelessWidget {
             width: double.infinity,
             decoration: const BoxDecoration(
               gradient: LinearGradient(colors: [
-                Color(0xffB81736),
-                Color(0xff2A1639),
+                MkasColor.degarColorRed,
+                MkasColor.degarColorBlack,
               ]),
             ),
             child: const Padding(
-              padding: EdgeInsets.only(top:85.0, left: 22),
+              padding: EdgeInsets.only(top: 85.0, left: 22),
               child: Text(
                 'Hello\n Sign in ',
                 style: TextStyle(
@@ -32,12 +39,12 @@ class RegisterScreen extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 200.0),
+            padding: const EdgeInsets.only(top: 300.0),
             child: Container(
               decoration: const BoxDecoration(
                 borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(30),
-                    topRight: Radius.circular(30)),
+                    topLeft: Radius.circular(40),
+                    topRight: Radius.circular(40)),
                 color: Colors.white,
               ),
               height: double.infinity,
@@ -56,7 +63,7 @@ class RegisterScreen extends StatelessWidget {
                               'Full Name',
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
-                                color: Color(0xffB81736),
+                                color: MkasColor.Bluetext,
                               ),
                             )),
                       ),
@@ -68,35 +75,59 @@ class RegisterScreen extends StatelessWidget {
                               'Phone or Gamil',
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
-                                color: Color(0xffB81736),
+                                color: MkasColor.Bluetext,
                               ),
                             )),
                       ),
-                      const TextField(
+                      TextField(
                         decoration: InputDecoration(
                             hintText: 'Password',
-                            suffixIcon:
-                                Icon(Icons.visibility_off, color: Colors.grey),
-                            label: Text(
+                            suffixIcon: IconButton(
+                              icon: Icon(
+                                _obscurePassword
+                                    ? Icons.visibility_off
+                                    : Icons.visibility,
+                                color: Colors.grey,
+                              ),
+                              onPressed: () {
+                                setState(() {
+                                  _obscurePassword = !_obscurePassword;
+                                });
+                              },
+                            ),
+                            label: const Text(
                               'Password',
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
-                                color: Color(0xffB81736),
+                                color: MkasColor.Bluetext,
                               ),
                             )),
+                        obscureText: _obscurePassword,
                       ),
-                      const TextField(
+                      TextField(
                         decoration: InputDecoration(
                             hintText: 'Confirm Password',
-                            suffixIcon:
-                                Icon(Icons.visibility_off, color: Colors.grey),
+                            suffixIcon: IconButton(
+                              icon: Icon(
+                                _obscurePassword
+                                    ? Icons.visibility_off
+                                    : Icons.visibility,
+                                color: Colors.grey,
+                              ),
+                              onPressed: () {
+                                setState(() {
+                                  _obscurePassword = !_obscurePassword;
+                                });
+                              },
+                            ),
                             label: Text(
                               'Confirm Password',
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
-                                color: Color(0xffB81736),
+                                color: MkasColor.Bluetext,
                               ),
                             )),
+                        obscureText: _obscurePassword,
                       ),
                       const SizedBox(
                         height: 20,
@@ -121,8 +152,8 @@ class RegisterScreen extends StatelessWidget {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(30),
                           gradient: const LinearGradient(colors: [
-                            Color(0xffB81736),
-                            Color(0xff2A1639),
+                            MkasColor.degarColorRed,
+                            MkasColor.degarColorBlack,
                           ]),
                         ),
                         child: const Center(

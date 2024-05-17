@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:semanumerique_mobile/core/core.dart';
-import 'package:semanumerique_mobile/import.dart';
 
 class ButonSigninSignup extends StatelessWidget {
   const ButonSigninSignup({

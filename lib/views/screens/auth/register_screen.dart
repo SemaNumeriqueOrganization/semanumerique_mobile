@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:semanumerique_mobile/core/core.dart';
-import 'package:semanumerique_mobile/import.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
@@ -129,7 +127,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                 });
                               },
                             ),
-                            label: Text(
+                            label: const Text(
                               'Confirm Password',
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,

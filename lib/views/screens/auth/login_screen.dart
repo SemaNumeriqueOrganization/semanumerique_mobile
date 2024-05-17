@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:semanumerique_mobile/core/constants/color.dart';
 import 'package:semanumerique_mobile/core/constants/constants.dart';
 import 'package:semanumerique_mobile/core/core.dart';
 import 'package:semanumerique_mobile/import.dart';
+import 'package:semanumerique_mobile/views/views.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -56,16 +55,10 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const TextField(
-                        decoration: InputDecoration(
-                            suffixIcon: Icon(Icons.check, color: Colors.grey),
-                            label: Text(
-                              'Gmail',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: MkasColor.Bluetext,
-                              ),
-                            )),
+                      const CustomTextField(
+                        label: 'Gmail',
+                        hint: "example : semanumerique@gmail.com",
+                        suffixIcon: Icon(Icons.mail, color: Colors.grey),
                       ),
                       TextField(
                         decoration: InputDecoration(
@@ -89,6 +82,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               color: MkasColor.Bluetext,
                             ),
                           ),
+                          hintText: "Example : Hjdeis3s",
                         ),
                         obscureText: _obscurePassword,
                       ),
@@ -110,7 +104,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         height: 70,
                       ),
                       GestureDetector(
-                        onTap: () => Get.toNamed(AppRoute.homeScreen),
+                        onTap: () => Get.offNamed(AppRoute.homeScreen),
                         child: Container(
                           height: 50,
                           width: 300,
@@ -133,30 +127,34 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       ),
                       SizedBox(height: MediaQuery.of(context).size.height / 15),
-                      const Align(
+                      Align(
                         alignment: Alignment.bottomRight,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.end,
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
-                            Text(
+                            const Text(
                               "Don't have account ?",
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: Colors.grey,
                               ),
                             ),
-                            Text(
-                              'Sign Up',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 17,
-                                color: Colors.black,
+                            TextButton(
+                              onPressed: () =>
+                                  Get.toNamed(AppRoute.registerScreen),
+                              child: const Text(
+                                'Sign Up',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 17,
+                                  color: Colors.black,
+                                ),
                               ),
                             ),
                           ],
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),
@@ -168,3 +166,4 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 }
+

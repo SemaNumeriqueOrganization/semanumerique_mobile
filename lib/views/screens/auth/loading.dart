@@ -27,7 +27,7 @@ class _LoadingState extends State<Loading> {
         child: Column(
           children: [
             Padding(
-              padding: EdgeInsets.only(top: 200.0),
+              padding: const EdgeInsets.only(top: 200.0),
               child: Image(
                 image: const AssetImage(
                   'assets/logo2.png',
@@ -63,7 +63,8 @@ class _LoadingState extends State<Loading> {
                 textStyle: const TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
-                    color: Colors.black)),
+                  color: Colors.black),
+            ),
             const Spacer(),
             const Text(
               'login with Social Media ',
@@ -76,7 +77,7 @@ class _LoadingState extends State<Loading> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Icon(
-                  FontAwesomeIcons.instagram,
+                  FontAwesomeIcons.google,
                   size: 30,
                   color: Colors.white,
                 ),

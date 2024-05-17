@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:semanumerique_mobile/core/core.dart';
+import 'package:semanumerique_mobile/views/views.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
@@ -62,6 +63,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
+                      const CustomTextField(
+                        label: 'Gmail',
+                        hint: "example : semanumerique@gmail.com",
+                        suffixIcon: Icon(Icons.mail, color: Colors.grey),
+                      ),
                       const TextField(
                         decoration: InputDecoration(
                             hintText: 'Name',
